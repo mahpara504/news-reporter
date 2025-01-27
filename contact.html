@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - DNBC News</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="world.html">Today in World</a></li>
+            <li><a href="sports.html">Sports</a></li>
+            <li><a href="business.html">Business</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="cities.html">Top Cities</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h1>Contact Us</h1>
+    <p>Address: 123 News Street, London, UK</p>
+
+    <div id="map" style="width:100%; height:400px;"></div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap" async defer></script>
+    <script>
+        function initMap() {
+            var officeLocation = {lat: 51.5074, lng: -0.1278};
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 10,
+                center: officeLocation
+            });
+            var marker = new google.maps.Marker({
+                position: officeLocation,
+                map: map
+            });
+        }
+    </script>
+</main>
+
+<footer>
+    <p>&copy; 2025 DNBC News. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
